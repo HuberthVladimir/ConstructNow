@@ -1,0 +1,303 @@
+* {box-sizing: border-box;}
+
+/* Definição de altura 100% para responsividade e fonte dos textos */
+body, html{
+	height: 100%;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 17px;
+	margin: 0;
+}
+
+/* barra de navegação */
+header nav{
+	background: #000770;
+	opacity: 0.9;
+}
+
+/* define os itens da navegação a direita */
+#lista-navegacao{
+	margin-left: auto;	
+}
+
+/* customização do menu de navegação */
+.navbar-nav .nav-link {
+	color: white;
+	opacity: 0.6;
+	font-size: 15px;
+	line-height: 22px;
+	letter-spacing: 0.2em;
+	font-weight: 900;
+	margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover {
+	opacity: 1;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+/* ---------------------------------SLIDE-------------------------
+
+/* Container do slide */
+.containerSlide{
+	position: relative;
+	margin: auto;
+}
+
+
+.imgTelaInteira {
+	object-fit: cover;
+	position: relative;
+	vertical-align: middle;
+	width: 100%;
+	height: 800px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* esconder as imagens por padrão */
+.meusSlides {
+	display: none;
+}
+
+/* Botões proximo e anterior */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;
+  margin-top: -22px;
+  color: white;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+}
+
+/* Posição do botão next na direita */
+.next {
+  right: 0;
+  border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+	background-color: #000770;
+  	opacity: 0.6;
+  	color: white;
+}
+
+/* Centralização da mensagem na tela */
+.caixaTexto{
+	position: absolute;
+	top: 45%;
+	width: 100%;
+	text-align: center;
+}
+
+/* Definições da mensagem na tela */
+.caixaTexto span.texto{
+	background-color: #000770;
+	color: white;
+	padding: 18px;
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	cursor: default;
+	opacity: 0.8;
+	margin-top: 40px 0 40px 0;
+	display: inline-block;
+	margin: 0 60px;
+
+}
+
+/* Circulos e transição do circulo*/
+.dot{
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px 10px 2px;
+	background-color: #000770;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6 ease;
+}
+
+.active, .dot:hover {
+  background-color: white;
+}
+
+/* animação slide */
+.animacao {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* ------------------------------FIM SLIDE-------------------------
+*/
+
+/* ------------------------------QUEM SOMOS INICIO------------------
+*/
+.intro {
+	padding:60px;
+	background: white;
+}
+
+.intro h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 59px;
+	line-height: 1.4;
+	letter-spacing: 0.215em;
+	font-weight: 900;
+	color: #000770;
+}
+
+.intro h1, h3,p{
+	margin: 15px;
+	padding: 15px;
+}
+
+.intro h3{
+	font-size: 26px;
+	line-height: 1.4;
+	letter-spacing: 0.215em;
+	font-weight: 900;
+	color: #39AAED;
+}
+
+.intro p{
+	font-size: 16px;
+}
+/* ------------------------------QUEM SOMOS FIM------------------
+*/
+/* ------------------------------PROJETO PARALAX INICIO------------------
+*/
+.tituloPar{
+	padding: 60px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.tituloPar h3{
+	text-transform: uppercase;
+	font-size: 59px;
+	line-height: 1.4;
+	letter-spacing: 0.215em;
+	font-weight: 900;
+	color: #000770;
+	color: white;
+}
+
+.textParalax {
+	font-size: 18px;
+	padding: 60px;
+    margin: 60px;
+	text-align: center;
+	font-weight: 100;
+	font-size: 16px;
+	letter-spacing: 0.164em;
+	line-height: 1.5;
+}
+
+.paralax1, .paralax2, .paralax3, .paralax4{
+	position: relative;
+	min-height: 900px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+  .paralax1{
+    background-image: url("../Imagens/projeto1.jpg");
+  }
+
+  .paralax2{
+    background-image: url("../Imagens/projeto2.jpg");
+  }
+
+  .paralax3{
+    background-image: url("../Imagens/projeto3.jpg");
+  }
+
+  .paralax4{
+    background-image: url("../Imagens/projeto4.jpg");
+  }
+
+
+
+/* ------------------------------PROJETOS PARALAX FIM------------------
+*/
+
+/* Resposividade no restante da pagina*/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+	.caixaTexto span.texto {
+	  	font-size: 25px;
+	  	padding: 10px 0;
+	  	margin: 0 40px;
+  		}
+}  		
+
+	.textParalax {
+		font-size: 16px;
+		margin: 50px;
+		padding: 50px;
+	}
+
+@media screen and (max-width: 767px) and (min-width: 481px){
+	.caixaTexto span.texto {
+	  	font-size: 18px;
+	  	padding: 10px 0;
+	  	margin: 0 40px;
+		}
+}
+
+	.prev, .next {
+		padding: 12px;
+	}
+
+	.textParalax {
+		margin: 40px;
+		padding: 40px;
+		font-size: 13px;
+	}
+
+
+@media screen and (max-width: 480px){
+	.caixaTexto span.texto {
+	  	font-size: 15px;
+	  	padding: 10px 0;
+	  	margin: 0 40px;
+	}
+
+	.prev, .next {
+		padding: 10px;
+	}
+
+	.intro{
+		font-size: 14px;
+	}
+
+	.intro h1{
+		font-size: 49px;
+	}
+
+	.textParalax {
+		margin: 40px;
+		padding: 40px;
+		font-size: 13px;
+	}
