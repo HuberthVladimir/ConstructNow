@@ -1,5 +1,5 @@
 # Construct Now
 
-![](./Preview-website.png)
+![](./Preview/Preview-website.png)
 
 A website made for train my css skills
